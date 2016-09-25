@@ -9,13 +9,13 @@
 
 int main()
 {
-  AnuRandom anu{ TypeFormat::uint16, 1 };
+  AnuRandom anu{ TypeFormat::uint16, 5 };
 
   auto const& data = anu.get();
 
   for (auto& value : data)
   {
-    std::cout << value << std::endl;
+    std::cout << value << " ";
   }
 
   return 0;
