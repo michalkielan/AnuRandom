@@ -10,6 +10,13 @@ install:
     - sudo apt-get install g++-5
     - sudo apt-get install libboost-dev-all
 
+addons:
+    apt:
+        sources:
+            - boost-latest
+        packages:
+            - libboost1.55-all-dev
+
 script: make all
 
 
