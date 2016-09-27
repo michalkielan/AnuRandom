@@ -1,6 +1,8 @@
 language: cpp
 
-compiler: gcc
+compiler: g++
+
+before_script: ls
 
 script: make all
 
