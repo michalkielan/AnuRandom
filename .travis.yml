@@ -2,9 +2,6 @@ language: cpp
 
 compiler: g++-5
 
-before_script: 
-    - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
-
 addons:
     apt:
         sources:
@@ -13,6 +10,10 @@ addons:
         packages:
             - libboost1.55-all-dev
             - g++-5
+
+
+before_script:
+    - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
 
 env: GCC_VERSION=5 CPP=14 LIBCXX=Off
 
