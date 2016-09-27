@@ -2,7 +2,9 @@ language: cpp
 
 compiler: g++-5
 
-before_script: ls
+before_script: 
+    - ls
+    - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
 
 install:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
@@ -17,12 +19,4 @@ addons:
             - libboost1.55-all-dev
 
 script: make all
-
-
-
-
-
-
-
-
 
