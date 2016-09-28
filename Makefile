@@ -1,4 +1,4 @@
-CXX=g++
+if[${CXX?}=""]; then CXX="g++"; fi;
 CPP_STD=c++11
 
 CFLAGS= -std=$(CPP_STD) -Wall -g
