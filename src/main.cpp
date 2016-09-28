@@ -6,6 +6,7 @@
  */
 
 #include "AnuRandom.h"
+#include <iostream>
 
 int main()
 {

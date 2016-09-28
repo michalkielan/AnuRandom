@@ -6,9 +6,13 @@ TARGET=anurandom
 
 LDFLAGS=-lboost_system -lpthread
 
-SRC=$(shell ls *.cpp)
+SRC_PATH=src/
+INC_PATH=inc/
+
+INC=$(INC_PATH)
+SRC=$(shell ls $(SRC_PATH)*.cpp)
 
 all:
-	$(CXX) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
+	$(CXX) $(CFLAGS) -I $(INC) $(SRC) -o $(TARGET) $(LDFLAGS)
 clean:
 	rm -rf $(TARGET) *.o
