@@ -1,3 +1,4 @@
+CXX=g++
 CPP_STD=c++11
 
 CFLAGS= -std=$(CPP_STD) -Wall -g
