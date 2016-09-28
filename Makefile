@@ -1,4 +1,14 @@
+CPP_STD=c++11
+
+CFLAGS= -std=$(CPP_STD) -Wall -g
+
+TARGET=anurandom
+
+LDFLAGS=-lboost_system -lpthread
+
+SRC=$(shell ls *.cpp)
+
 all:
-	$(CXX) -std=c++11 AnuRandom.cpp main.cpp -o anurandom -lboost_system -lpthread
+	$(CXX) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAFS)
 clean:
-	rm -rf anurandom
+	rm -rf $(TARGET) *.o

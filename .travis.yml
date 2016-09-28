@@ -24,7 +24,6 @@ addons:
             - g++-5
             - clang
 
-
 before_script:
     - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
 
