@@ -3,7 +3,6 @@ sudo: required
 language: cpp
 compiler:
     - gcc
-    - clang
 
 install:
     - if [ "$CXX" = "g++" ]; then export CXX="g++-5"; fi
@@ -16,13 +15,11 @@ addons:
         packages:
             - gcc-5
             - g++-5
-            - clang
 
         packages:
             - libboost1.55-all-dev
             - gcc-5
             - g++-5
-            - clang
 
 before_script:
     - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
