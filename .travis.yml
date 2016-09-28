@@ -21,7 +21,7 @@ addons:
             - gcc-5
             - g++-5
 
-    coverity_scan:
+        coverity_scan:
             name: AnuRandom
             version: 1.0
             description: anu random data downloader
