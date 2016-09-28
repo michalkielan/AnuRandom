@@ -21,8 +21,16 @@ addons:
             - gcc-5
             - g++-5
 
+    coverity_scan:
+            name: AnuRandom
+            version: 1.0
+            description: anu random data downloader
+            notification_email: michalkielan6@gmail.com
+
+
 before_script:
     - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
 
 script: make all
 
+branch_pattern: master
