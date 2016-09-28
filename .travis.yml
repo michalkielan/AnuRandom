@@ -17,7 +17,7 @@ addons:
             - g++-5
 
         packages:
-            - libboost1.55-system-dev
+            - libboost-system1.55-dev
             - gcc-5
             - g++-5
 
