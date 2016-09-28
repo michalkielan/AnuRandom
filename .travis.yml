@@ -22,7 +22,7 @@ addons:
             - libboost1.55-all-dev
             - gcc-5
             - g++-5
-            - clang-3.6
+            - clang
 
 
 before_script:
