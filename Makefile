@@ -9,6 +9,6 @@ LDFLAGS=-lboost_system -lpthread
 SRC=$(shell ls *.cpp)
 
 all:
-	$(CXX) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAFS)
+	$(CXX) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
 clean:
 	rm -rf $(TARGET) *.o
