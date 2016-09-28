@@ -1,16 +1,23 @@
-sudo: required
-dist: trusty
+sudo: false
 
 language: cpp
+compiler:
+    - gcc
+    - clang
 
-compiler: g++-5
+install:
+    - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
 
 addons:
     apt:
         sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.6
             - boost-latest
+        packages:
+            - gcc-5
+            - g++-5
+            - clang
+
         packages:
             - libboost1.55-all-dev
             - gcc-5
@@ -20,10 +27,6 @@ addons:
 
 before_script:
     - sudo ln -s /usr/lib/libboost_system.* /usr/lib/libboost_system.so
-
-env: GCC_VERSION=5 CPP=14 LIBCXX=Off
-
-addons: *gcc5
 
 script: make all
 
